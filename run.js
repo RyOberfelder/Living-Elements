@@ -1,6 +1,11 @@
-primitive(d3.select("#testDiv2"))
-  .json({"height" : 200, "width": 300});
-  .properties({"margins": {"top": 10, "bottom"}})
+primitive(d3.select("#aweRect"))
+  .json({"fill" : "blue", "r": 100 ,"cx":0,"cy":0})
+  .properties({"margins": {"top": 10, "bottom" : 10}})
   .data("hello Fred")
-  .bind()
-  console.log(d3.select("#testDiv2"));
+  .element("circle")
+  .updateNode()
+  .updateJson()
+  .transition()
+  .json({"fill" : "red", "r": 50, "cx":50,"cy":100}).duration(4000).spark()
+  .spread().json({"fill" : "green", "r": 100, "cx":50,"cy":100}).duration(4000).spark()
+  .release()
