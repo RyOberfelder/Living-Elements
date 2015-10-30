@@ -1,0 +1,75 @@
+Library Principles
+< Last Updated by : Ryan Oberfelder>
+< Date of last update: 11:00am EST 09/23/2015 >
+
+What are the Core principles of Design?
+
+    Encapsulation:
+
+        When we call a function is when items will start getting put into memory.
+
+        The intention is that we do not bog down memory with a ton of dictionaries
+        but rather a bunch of functions that can create dictionaries when used.
+
+        This should protect user memory and only let the user to use
+        the concepts that the user wants to use and nothing more memory wise.
+
+        EX:
+
+            primitive is designed this way so that you do not have use primitive
+            if you do not want to
+
+            Further, the core of primitive is encapsulated the same way
+            so that if you do not want to use it (which you should want to if
+            you call primitive) you do not technically have to.
+
+    Usability:
+
+        the goal of the libaray easy to use is to create a model that will make
+        programming the with the library easier.
+
+        Daisy-chaining functionality makes it easy to conceptually understand
+        what you are affecting for easy readability.
+
+        EX:
+
+            primitive for example can have a series of function calls like so.
+
+            primitive(d3.select("#theSVG")).set("circle")
+                .json("r",40)
+                .json("fill" , "red")
+                .json("opacity",0.5)
+                .updateJson();
+
+            We know with primitive we are selecting a primitive, but we anywhere
+            also clearly applying a 40 value to an r, an opacity of 0.5
+            and a "red" value to a fill
+
+        This makes is simple to see what we are doing while affecting the
+        selected "#theSVG"
+
+    Flexibility :
+
+        When a user wants to use a function, a function should be able to have
+        some intuitive and wide ranging ways to pass data into the function.
+
+        EX:
+            assuming some set up like so:
+
+            var myElement = primitive(d3.select("#theSVG")).set("circle")
+
+            you should be able to call
+
+            myElement.json("r", 40)
+
+                This will set a r == 40 in the json dictionary and return core
+
+            myElement.json("r")
+
+                returns value of the json dictionary
+
+            myElement.json({"r":40,"fill":"blue","opacity":0.5})
+
+                sets the json dictionary to dictionary passed it.
+
+            and many more types of inputs.

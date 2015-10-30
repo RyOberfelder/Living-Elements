@@ -2,6 +2,11 @@
 <html>
 <head>
   <title> Living-Elements-Testing </title>
+  <style>
+  body{
+    background-color: blue;
+  }
+  </style>
 </head>
 <!--
  Note that in order to run the library, the following code is need in the html pages
@@ -13,7 +18,10 @@
 <script src="./js/jquery-2.1.4.min.js" charset="utf-8"></script>
 <script src="./js/jquery-ui.js" charset="utf-8"></script>
 <script src="./js/d3.min.js" charset="utf-8"></script>
+<script src="./library/kernal.js" charset="utf-8"></script>
+<script src="./library/svgSupport.js" charset="utf-8"></script>
 <script src="./library/primitive.js" charset="utf-8"></script>
+<script src="./library/interactable.js" charset="utf-8"></script>
 <body>
 
 <h1>My First Heading</h1>
@@ -22,10 +30,8 @@
 <div id="testDiv"></div>
 <div id="testDiv2"></div>
 <div id="testDiv3"></div>
-<div id="testDiv4"></div>
-<svg id="theSVG">
-  <rect id="aweRect" height="100" width="100">
-</svg>
+<div id="testDiv4"><svg id="theSVG" class="fun">
+</svg></div>
 </body>
 <script src="./run.js" charset="utf-8"></script>
 </html>

@@ -5,7 +5,13 @@ What is the purpose of format?
 
 
 purpose
-  --> a Selection
+  --> a Selection should have data and functions bound to it like an Object
+    inner
+    .json = function(theFunction){
+    if Array
+    }
+    .properties
+    .data
 */
 
 function format(selection){
